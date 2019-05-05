@@ -8,12 +8,12 @@
   >git clone https://github.com/**********/note.git
 
 *2.拉取下来默认是master分支，master分支是最终发布版的内容，所以我们创建新分支test。*
-  > git branch -b test
+  > git checkout -b test
   >
   > git push origin test:test
 
 
-git branch因为没有指定远程分支（还没有对应的远程分支），是在本地仓库上创建一分支。</br>
+git checkout因为没有指定远程分支（还没有对应的远程分支），是在本地仓库上创建一分支。</br>
 git push 远程仓库名 远程分支:本地分支；提交远程分支未找到其分支系统将自动创建。使用git branch -a查看所有分支，会看到remotes/origin/test这个远程分支，说明新建远程分支成功
 
 *3. 将内容提交至本地git仓库*
@@ -24,7 +24,7 @@ git push 远程仓库名 远程分支:本地分支；提交远程分支未找到
   >git commit -m "first commit"
 
 git add -A 将所有的变更的文件（新增、修改、删除）的文件都放到暂存区中。
-git status 确认下是否所有的变更的文件都方到暂存区中。
+git status 确认下是否所有的变更的文件都放到暂存区中。
 git commit 是将暂存区的内容提交到本地git仓库中。
 
 *4.本地git仓库推送到远程仓库中*
